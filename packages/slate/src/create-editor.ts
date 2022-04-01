@@ -11,9 +11,9 @@ import {
   Range,
   RangeRef,
   Text,
-  Transforms,
+  Transforms
 } from './'
-import { DIRTY_PATHS, DIRTY_PATH_KEYS, FLUSHING } from './utils/weak-maps'
+import { DIRTY_PATHS,DIRTY_PATH_KEYS,FLUSHING } from './utils/weak-maps'
 
 /**
  * Create a new Slate `Editor` object.
@@ -152,6 +152,10 @@ export const createEditor = (): Editor => {
         return Node.fragment(editor, selection)
       }
       return []
+    },
+
+    getDirtyPaths: () => {
+      return DIRTY_PATHS.get(editor) || []
     },
 
     insertBreak: () => {

@@ -1,5 +1,4 @@
 import { isPlainObject } from 'is-plain-object'
-
 import {
   Ancestor,
   ExtendedType,
@@ -14,24 +13,22 @@ import {
   Range,
   RangeRef,
   Span,
-  Text,
-  Transforms,
+  Text
 } from '..'
+import {
+  getCharacterDistance,getWordDistance,splitByCharacterDistance
+} from '../utils/string'
 import {
   DIRTY_PATHS,
   DIRTY_PATH_KEYS,
   NORMALIZING,
   PATH_REFS,
   POINT_REFS,
-  RANGE_REFS,
+  RANGE_REFS
 } from '../utils/weak-maps'
-import {
-  getWordDistance,
-  getCharacterDistance,
-  splitByCharacterDistance,
-} from '../utils/string'
-import { Descendant } from './node'
 import { Element } from './element'
+import { Descendant } from './node'
+
 
 export type BaseSelection = Range | null
 
@@ -60,6 +57,7 @@ export interface BaseEditor {
   deleteBackward: (unit: 'character' | 'word' | 'line' | 'block') => void
   deleteForward: (unit: 'character' | 'word' | 'line' | 'block') => void
   deleteFragment: (direction?: 'forward' | 'backward') => void
+  getDirtyPaths: () => Path[]
   getFragment: () => Descendant[]
   insertBreak: () => void
   insertSoftBreak: () => void
