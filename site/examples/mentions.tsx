@@ -1,17 +1,13 @@
-import React, { useMemo, useCallback, useRef, useEffect, useState } from 'react'
-import { Editor, Transforms, Range, createEditor, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
+import { createEditor, Descendant, Editor, Range, Transforms } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
 import {
-  Slate,
-  Editable,
-  ReactEditor,
-  withReact,
-  useSelected,
-  useFocused,
-} from 'slate-react'
-
+    Editable,
+    ReactEditor, Slate, useFocused, useSelected, withReact
+} from '@shapeci/slate-react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Portal } from '../components'
 import { MentionElement } from './custom-types'
+
 
 const MentionExample = () => {
   const ref = useRef<HTMLDivElement | null>()

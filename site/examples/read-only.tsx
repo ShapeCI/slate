@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react'
-import { createEditor, Descendant, Element } from 'slate'
-import { Slate, Editable, withReact } from 'slate-react'
+import { createEditor, Descendant } from '@shapeci/slate'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useMemo, useState } from 'react'
 
 const ReadOnlyExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

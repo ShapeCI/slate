@@ -20,10 +20,10 @@ Once you've installed Slate, you'll need to import it.
 // Import React dependencies.
 import React, { useState } from 'react'
 // Import the Slate editor factory.
-import { createEditor } from 'slate'
+import { createEditor } from '@shapeci/slate'
 
 // Import the Slate components and React plugin.
-import { Slate, Editable, withReact } from 'slate-react'
+import { Slate, Editable, withReact } from '@shapeci/slate-react'
 ```
 
 Before we use those imports, let's start with an empty `<App>` component:
@@ -51,8 +51,8 @@ Of course we haven't rendered anything, so you won't see any changes.
 
 ```typescript
 // TypeScript users only add this code
-import { BaseEditor, Descendant } from 'slate'
-import { ReactEditor } from 'slate-react'
+import { BaseEditor, Descendant } from '@shapeci/slate'
+import { ReactEditor } from '@shapeci/slate-react'
 
 type CustomElement = { type: 'paragraph'; children: CustomText[] }
 type CustomText = { text: string }

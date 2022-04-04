@@ -27,7 +27,7 @@ In some cases you may want to extend or override Slate's default behavior, which
 Your custom event handler can control whether or not Slate should execute its own event handling for a given event after your handler runs depending on the return value of your event handler as described below.
 
 ```jsx
-import {Editable} from 'slate-react';
+import {Editable} from '@shapeci/slate-react';
 
 function MyEditor() {
   const onClick = event => {

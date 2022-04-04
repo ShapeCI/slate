@@ -9,7 +9,7 @@ And, because Slate uses plain JSON for its data, you can write serialization log
 For example, taking the value of an editor and returning plaintext:
 
 ```javascript
-import { Node } from 'slate'
+import { Node } from '@shapeci/slate'
 
 const serialize = nodes => {
   return nodes.map(n => Node.string(n)).join('\n')
@@ -53,7 +53,7 @@ For example, here's a similar `serialize` function for HTML:
 
 ```javascript
 import escapeHtml from 'escape-html'
-import { Text } from 'slate'
+import { Text } from '@shapeci/slate'
 
 const serialize = node => {
   if (Text.isText(node)) {
@@ -131,7 +131,7 @@ The most common way to use `slate-hyperscript` is for writing JSX documents, for
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from 'slate-hyperscript'
+import { jsx } from '@shapeci/slate-hyperscript'
 
 const input = (
   <fragment>
@@ -160,7 +160,7 @@ But `slate-hyperscript` isn't only for JSX. It's just a way to build _trees of S
 For example, here's a `deserialize` function for HTML:
 
 ```javascript
-import { jsx } from 'slate-hyperscript'
+import { jsx } from '@shapeci/slate-hyperscript'
 
 const deserialize = (el, markAttributes = {}) => {
   if (el.nodeType === Node.TEXT_NODE) {

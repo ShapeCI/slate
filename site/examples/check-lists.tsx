@@ -1,23 +1,13 @@
-import React, { useState, useMemo, useCallback } from 'react'
-import {
-  Slate,
-  Editable,
-  withReact,
-  useSlateStatic,
-  useReadOnly,
-  ReactEditor,
-} from 'slate-react'
-import {
-  Editor,
-  Transforms,
-  Range,
-  Point,
-  createEditor,
-  Descendant,
-  Element as SlateElement,
-} from 'slate'
 import { css } from '@emotion/css'
-import { withHistory } from 'slate-history'
+import {
+    createEditor,
+    Descendant, Editor, Element as SlateElement, Point, Range, Transforms
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import {
+    Editable, ReactEditor, Slate, useReadOnly, useSlateStatic, withReact
+} from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 const initialValue: Descendant[] = [
   {

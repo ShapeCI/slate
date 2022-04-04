@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from 'react'
-import { Transforms, createEditor, Descendant } from 'slate'
-import { Slate, Editable, useSlateStatic, withReact } from 'slate-react'
-import { withHistory } from 'slate-history'
 import { css } from '@emotion/css'
-
-import RichTextEditor from './richtext'
+import { createEditor, Descendant, Transforms } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, useSlateStatic, withReact } from '@shapeci/slate-react'
+import React, { useMemo, useState } from 'react'
 import { Button, Icon, Toolbar } from '../components'
 import { EditableVoidElement } from './custom-types'
+import RichTextEditor from './richtext'
+
 
 const EditableVoidsExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

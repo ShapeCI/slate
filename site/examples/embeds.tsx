@@ -1,17 +1,10 @@
-import React, { useState, useMemo } from 'react'
 import {
-  Transforms,
-  createEditor,
-  Element as SlateElement,
-  Descendant,
-} from 'slate'
+    createEditor, Descendant, Element as SlateElement, Transforms
+} from '@shapeci/slate'
 import {
-  Slate,
-  Editable,
-  withReact,
-  useSlateStatic,
-  ReactEditor,
-} from 'slate-react'
+    Editable, ReactEditor, Slate, useSlateStatic, withReact
+} from '@shapeci/slate-react'
+import React, { useMemo, useState } from 'react'
 
 const EmbedsExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

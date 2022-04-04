@@ -1,10 +1,10 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
-import { Text, Descendant, createEditor } from 'slate'
 import { css } from '@emotion/css'
-import { withHistory } from 'slate-history'
-
+import { createEditor, Descendant, Text } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { Icon, Toolbar } from '../components'
+
 
 const SearchHighlightingExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)
