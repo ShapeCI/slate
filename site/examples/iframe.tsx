@@ -1,11 +1,11 @@
+import { createEditor, Descendant, Editor } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, ReactEditor, Slate, useSlate, withReact } from '@shapeci/slate-react'
+import isHotkey from 'is-hotkey'
 import React, { useCallback, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
-import isHotkey from 'is-hotkey'
-import { Editable, withReact, useSlate, Slate, ReactEditor } from 'slate-react'
-import { Editor, createEditor, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
-
 import { Button, Icon, Toolbar } from '../components'
+
 
 const HOTKEYS = {
   'mod+b': 'bold',

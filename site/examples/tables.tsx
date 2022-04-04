@@ -1,14 +1,9 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
 import {
-  Editor,
-  Range,
-  Point,
-  Descendant,
-  createEditor,
-  Element as SlateElement,
-} from 'slate'
-import { withHistory } from 'slate-history'
+    createEditor, Descendant, Editor, Element as SlateElement, Point, Range
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 const TablesExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

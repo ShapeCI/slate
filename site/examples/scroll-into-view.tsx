@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react'
-import { createEditor, Descendant } from 'slate'
-import { Slate, Editable, withReact } from 'slate-react'
-import { withHistory } from 'slate-history'
 import { css } from '@emotion/css'
+import { createEditor, Descendant } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
 import range from 'lodash/range'
+import React, { useMemo, useState } from 'react'
 
 /**
  * This is an example we can use to test the scrollIntoView functionality in

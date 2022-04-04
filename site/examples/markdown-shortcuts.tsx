@@ -1,15 +1,9 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
 import {
-  Editor,
-  Transforms,
-  Range,
-  Point,
-  createEditor,
-  Element as SlateElement,
-  Descendant,
-} from 'slate'
-import { withHistory } from 'slate-history'
+    createEditor, Descendant, Editor, Element as SlateElement, Point, Range, Transforms
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { BulletedListElement } from './custom-types'
 
 const SHORTCUTS = {

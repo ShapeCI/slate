@@ -1,21 +1,15 @@
-import React, { useState, useMemo } from 'react'
+import { css } from '@emotion/css'
+import { createEditor, Descendant, Transforms } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import {
+    Editable, ReactEditor, Slate, useFocused, useSelected, useSlateStatic, withReact
+} from '@shapeci/slate-react'
 import imageExtensions from 'image-extensions'
 import isUrl from 'is-url'
-import { Transforms, createEditor, Descendant } from 'slate'
-import {
-  Slate,
-  Editable,
-  useSlateStatic,
-  useSelected,
-  useFocused,
-  withReact,
-  ReactEditor,
-} from 'slate-react'
-import { withHistory } from 'slate-history'
-import { css } from '@emotion/css'
-
+import React, { useMemo, useState } from 'react'
 import { Button, Icon, Toolbar } from '../components'
 import { ImageElement } from './custom-types'
+
 
 const ImagesExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

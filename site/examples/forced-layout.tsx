@@ -1,13 +1,9 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
 import {
-  Transforms,
-  createEditor,
-  Node,
-  Element as SlateElement,
-  Descendant,
-} from 'slate'
-import { withHistory } from 'slate-history'
+    createEditor, Descendant, Element as SlateElement, Node, Transforms
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { ParagraphElement, TitleElement } from './custom-types'
 
 const withLayout = editor => {

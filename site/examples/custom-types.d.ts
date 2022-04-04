@@ -1,14 +1,8 @@
 import {
-  Text,
-  createEditor,
-  Node,
-  Element,
-  Editor,
-  Descendant,
-  BaseEditor,
-} from 'slate'
-import { ReactEditor } from 'slate-react'
-import { HistoryEditor } from 'slate-history'
+    BaseEditor, Descendant
+} from '@shapeci/slate'
+import { HistoryEditor } from '@shapeci/slate-history'
+import { ReactEditor } from '@shapeci/slate-react'
 
 export type BlockQuoteElement = {
   type: 'block-quote'

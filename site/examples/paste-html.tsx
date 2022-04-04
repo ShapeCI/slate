@@ -1,15 +1,11 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { jsx } from 'slate-hyperscript'
-import { Transforms, createEditor, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
 import { css } from '@emotion/css'
+import { createEditor, Descendant, Transforms } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { jsx } from '@shapeci/slate-hyperscript'
 import {
-  Slate,
-  Editable,
-  withReact,
-  useSelected,
-  useFocused,
-} from 'slate-react'
+    Editable, Slate, useFocused, useSelected, withReact
+} from '@shapeci/slate-react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 const ELEMENT_TAGS = {
   A: el => ({ type: 'link', url: el.getAttribute('href') }),

@@ -1,8 +1,8 @@
+import { createEditor, Descendant } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
-import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { createEditor, Descendant } from 'slate'
-import { Slate, Editable, withReact } from 'slate-react'
-import { withHistory } from 'slate-history'
 
 const ShadowDOM = () => {
   const container = useRef<HTMLDivElement>(null)

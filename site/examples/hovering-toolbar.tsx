@@ -1,17 +1,13 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { Slate, Editable, withReact, useSlate, useFocused } from 'slate-react'
-import {
-  Editor,
-  Transforms,
-  Text,
-  createEditor,
-  Descendant,
-  Range,
-} from 'slate'
 import { css } from '@emotion/css'
-import { withHistory } from 'slate-history'
-
+import {
+    createEditor,
+    Descendant, Editor, Range, Text, Transforms
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, useFocused, useSlate, withReact } from '@shapeci/slate-react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Button, Icon, Menu, Portal } from '../components'
+
 
 const HoveringMenuExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)

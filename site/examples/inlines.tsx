@@ -1,21 +1,16 @@
-import React, { useState, useMemo } from 'react'
-import isUrl from 'is-url'
-import { isKeyHotkey } from 'is-hotkey'
 import { css } from '@emotion/css'
-import { Editable, withReact, useSlate, useSelected } from 'slate-react'
-import * as SlateReact from 'slate-react'
 import {
-  Transforms,
-  Editor,
-  Range,
-  createEditor,
-  Element as SlateElement,
-  Descendant,
-} from 'slate'
-import { withHistory } from 'slate-history'
-import { LinkElement, ButtonElement } from './custom-types'
-
+    createEditor, Descendant, Editor, Element as SlateElement, Range, Transforms
+} from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import * as SlateReact from '@shapeci/slate-react'
+import { Editable, useSelected, useSlate, withReact } from '@shapeci/slate-react'
+import { isKeyHotkey } from 'is-hotkey'
+import isUrl from 'is-url'
+import React, { useMemo, useState } from 'react'
 import { Button, Icon, Toolbar } from '../components'
+import { ButtonElement, LinkElement } from './custom-types'
+
 
 const initialValue: Descendant[] = [
   {

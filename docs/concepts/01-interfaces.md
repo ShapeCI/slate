@@ -56,7 +56,7 @@ In addition to the typing information, each interface in Slate also exposes a se
 For example, when working with nodes:
 
 ```javascript
-import { Node } from 'slate'
+import { Node } from '@shapeci/slate'
 
 // Get the string content of an element node.
 const string = Node.string(element)
@@ -68,7 +68,7 @@ const descendant = Node.get(value, path)
 Or, when working with ranges:
 
 ```javascript
-import { Range } from 'slate'
+import { Range } from '@shapeci/slate'
 
 // Get the start and end points of a range in order.
 const [start, end] = Range.edges(range)
@@ -98,7 +98,7 @@ You can define these as one-off functions easily. But you might also bundle them
 For example:
 
 ```javascript
-import { Element } from 'slate'
+import { Element } from '@shapeci/slate'
 
 // You can use `MyElement` everywhere to have access to your extensions.
 export const MyElement = {

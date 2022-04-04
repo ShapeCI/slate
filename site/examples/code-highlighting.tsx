@@ -1,13 +1,13 @@
-import Prism from 'prismjs'
-import 'prismjs/components/prism-python'
-import 'prismjs/components/prism-php'
-import 'prismjs/components/prism-sql'
-import 'prismjs/components/prism-java'
-import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
-import { Text, createEditor, Element as SlateElement, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
 import { css } from '@emotion/css'
+import { createEditor, Descendant, Text } from '@shapeci/slate'
+import { withHistory } from '@shapeci/slate-history'
+import { Editable, Slate, withReact } from '@shapeci/slate-react'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-java'
+import 'prismjs/components/prism-php'
+import 'prismjs/components/prism-python'
+import 'prismjs/components/prism-sql'
+import React, { useCallback, useMemo, useState } from 'react'
 
 const CodeHighlightingExample = () => {
   const [value, setValue] = useState<Descendant[]>(initialValue)
